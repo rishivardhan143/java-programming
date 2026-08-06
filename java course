@@ -1,0 +1,783 @@
+
+import java.util.Scanner;
+class racker{
+    public static void main(String[] args){
+        Scanner pilly = new Scanner(System.in);
+        System.out.print("enter the year : ");
+        int year = pilly.nextInt();
+        if (year%400==0){
+            System.out.print("year is leap year");
+        }
+        else if(year%100 !=0 && year%4 == 0){
+            System.out.println("leap year");
+        }
+        else{
+            System.out.print("year is a normal year");
+        }
+    }
+}
+
+
+
+
+
+
+import java.util.Scanner;
+class rishi{
+    public static void main(String[] args){
+        Scanner inp = new Scanner(System.in);
+        System.out.println("enter the number :");
+        int rack = inp.nextInt();
+        System.out.println("enter number 2:");
+        int y = inp.nextInt();
+        int z=rack+y;
+        System.out.println("addition of the two numbers is :" + z);
+
+
+    }
+}
+
+
+import java.util.Scanner;
+
+class multiplications {
+
+    static void reck(int a, int i) {
+
+        if (i > 10)
+            return;
+
+        System.out.println(a + " * " + i + " = " + (a * i));
+
+        reck(a, i + 1);
+    }
+
+    public static void main(String[] args) {
+
+        Scanner r = new Scanner(System.in);
+
+        System.out.print("Enter value: ");
+        int a = r.nextInt();
+
+        reck(a, 1);
+    }
+}
+
+
+import java.util.Scanner;
+class triangle{
+    public static void main(String[] args){
+        Scanner Traingle = new Scanner(System.in);
+        System.out.print("enter the heigth :");
+        int ht = Traingle.nextInt();
+        System.out.print("enter the base :");
+        int base = Traingle.nextInt();
+        double z=Math.pow(ht,2)+Math.pow(base,2);
+        double hyp = Math.sqrt(z);
+        System.out.print("hypotenuse is :" +hyp);
+
+
+    }
+}
+
+
+import java.util.Random;
+class number {
+    public static void main(String[] args){
+        Random ep = new Random();
+        int x = ep.nextInt(100) +1;
+        System.out.println(x);
+        boolean z = x%2 ==0;
+        boolean lips = z ? true : false;
+        System.out.print(lips);
+    }
+}
+
+import java.util.Random;
+class number {
+    public static void main(String[] args){
+        Random ep = new Random();
+        int x = ep.nextInt(100) +1;
+        System.out.println(x);
+        if (x%2 ==0){
+            System.out.print(x+ " is even");
+        }
+        else{
+            System.out.print(x+ " is odd");
+        }
+  
+    }
+}
+
+
+
+# OTP generation
+import java.util.Random;
+class number {
+    public static void main(String[] args){
+        Random ep = new Random();
+        int x = ep.nextInt(99999) +1;
+        System.out.println("OTP is " +x);
+
+    }
+}
+
+import java.util.*;
+class typeo {
+    public static void main (String[] args){
+        Scanner number= new Scanner(System.in);
+        System.out.print("enter number :");
+        String nump = number.nextLine();
+        int x = Integer.parseInt(nump);
+        System.out.println("number is :" +x);
+        int z = x%3;
+        System.out.print("remainder : " +z);
+
+
+
+    }
+}
+
+
+
+
+import java.util.Scanner;
+class notes {
+    public static void main(String[] args){
+        Scanner number = new Scanner(System.in);
+        System.out.print("enter the amount  :");
+        int x = number.nextInt();
+        if (x>500){
+        int five =x/500;
+        System.out.println("number of 500 notes are :" +five);
+        int two = x/200;
+        System.out.println("number of 200 notes are :" +two );
+        int hundred = x/100;
+        System.out.println("number of 200 notes are :" +hundred );
+        int fifty = x/50;
+        System.out.println("number of 200 notes are :" +fifty );
+        int twenty = x/20;
+        System.out.println("number of 200 notes are :" +twenty );
+        int ten = x/10;
+        System.out.println("number of 200 notes are :" +ten );
+        int total = five + two + hundred + fifty + twenty + ten ; 
+        System.out.print("total number of notes :" +total);
+        }
+        if (x<500){
+        int five =x/500;
+        System.out.println("number of 500 notes are :" +five);
+        int two = x/200;
+        System.out.println("number of 200 notes are :" +two );
+        int hundred = x/100;
+        System.out.println("number of 200 notes are :" +hundred );
+        int fifty = x/50;
+        System.out.println("number of 200 notes are :" +fifty );
+        int twenty = x/20;
+        System.out.println("number of 200 notes are :" +twenty );
+        int ten = x/10;
+        System.out.println("number of 200 notes are :" +ten );
+        int total = five + two + hundred + fifty + twenty + ten ; 
+        System.out.print("total number of notes :" +total);
+        }
+
+    }
+}
+
+
+
+
+import java.math.BigInteger;
+import java.util.Scanner;
+class ram{
+    public static void main(String[] args){
+        Scanner number= new Scanner(System.in);
+        System.out.println("enter the number 1 :");
+        int num1 = number.nextInt();
+        System.out.println("enter the number 2 :");
+        int num2 = number.nextInt();
+        BigInteger a = BigInteger.valueOf(num1);
+        BigInteger b = BigInteger.valueOf(num2);
+        BigInteger z = a.gcd(b);
+        System.out.println("HCF is:" +z);
+        BigInteger ops = a.multiply(b).divide(z);
+        System.out.print("LCM is :" +ops);
+
+    
+
+    }
+}
+
+
+
+import java.util.Scanner;
+class ram{
+    public static void main(String[] args){
+
+        System.out.print("enter the number :" );
+        Scanner number = new Scanner(System.in);
+        int num1 = number.nextInt();
+        if (num1%2==0){
+            System.out.print(num1 +" is a even number");
+
+        }
+        else{
+            System.out.print(num1+ " is a odd number");
+        }
+
+    }
+}
+
+
+
+import java.util.Scanner;
+class ram{
+    public static void main(String[] args){
+
+        System.out.print("enter the number :" );
+        Scanner number = new Scanner(System.in);
+        String num1 = number.nextLine();
+        System.out.println("***********************************");
+        System.out.println("***********************************");
+        System.out.println("**************|"+ num1 +"|**************");
+        System.out.println("***********************************");
+        System.out.println("***********************************");
+
+        
+
+    }
+}
+
+
+
+import java.util.Scanner;
+class rishi{
+    public static void main(String[] args ){
+        Scanner interest= new Scanner(System.in);
+        System.out.print("enter the principle :");
+        int principle= interest.nextInt();
+        System.out.print("enter the time:");
+        int time= interest.nextInt();
+        System.out.print("enter the rate:");
+        int rate= interest.nextInt();
+        int z =(principle*time*rate)/100;
+        System.out.print("interest is :" +z);
+        
+    }
+}
+
+import java.util.Scanner;
+class rishi{
+    public static void main(String[] args ){
+        Scanner number= new Scanner(System.in);
+        System.out.print("enter the number 1 :");
+        int num1= number.nextInt();
+        System.out.print("enter the number 2 :");
+        int num2= number.nextInt();
+        System.out.print("enter the operation: ");
+        char cala = number.next().charAt(0);
+        if(cala=='+'){
+            int z=num1+num2;
+            System.out.print("answer is :" +z);
+        }
+        else if(cala =='-'){
+            int z = num1-num2;
+            System.out.print("answer is :" +z);
+
+        }
+        else if (cala =='*'){
+            int z= num1*num2;
+            System.out.print("answer is :" +z);
+
+        }
+        else if (cala=='%'){
+            int z =num1/num2;
+            System.out.print("answer is :" +z);
+
+        }
+        else{
+            System .out.print("error");
+        }
+        
+    }
+}
+
+
+import java.util.Scanner;
+class fibonacci{
+
+    static ramp(int a,int b, int number){
+        if (number==0){
+            return;
+            System.out.print(a);
+            ramp(b,a+n,number-1);
+        }
+
+    }
+    public static void main(String[] args ){
+        Scanner num= new Scanner(System.in);
+        System.out.print("enter the number :");
+        int number = num.nextInt();
+        ramp(0,1,number);
+    }
+}
+
+
+import java.util.Scanner;
+class factors{
+    public static void main(String[] args ){
+        System.out.print("enter the number :");
+        Scanner info =  new Scanner(System.in);
+        int x  = info.nextInt();
+        for (int i =1;i <=100000;i++){
+            if(x%i==0){
+                System.out.println("factors of "+x+" is :" +i );
+            }
+        } 
+
+    }
+}
+
+
+import java.util.Scanner;
+
+class Armstrong {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        int temp = num;
+        int digits = 0;
+        int sum = 0;
+
+        // Count digits
+        while (temp != 0) {
+            digits++;
+            temp = temp / 10;
+        }
+
+        temp = num;
+
+        // Calculate sum of powers
+        while (temp != 0) {
+            int rem = temp % 10;
+            int power = 1;
+
+            for (int i = 1; i <= digits; i++) {
+                power = power * rem;
+            }
+
+            sum = sum + power;
+            temp = temp / 10;
+        }
+
+        if (sum == num)
+            System.out.println("Armstrong Number");
+        else
+            System.out.println("Not an Armstrong Number");
+    }
+}
+
+import java.util.*;
+class palindrome {
+    public static void main(String [] args){
+        System.out.print("enter the number :");
+        Scanner pali= new Scanner(System.in);
+        String palin = pali.nextLine();
+        String pap  = "";
+        for (int i = palin.length()-1;i >=0;i--){
+            pap =pap+palin.charAt(i);
+            
+        }
+        if (palin.equals(pap)){
+            System.out.print("it is palindrome ");
+        }
+        else{
+            System.out.print("pora puka");
+        }
+
+    }
+}
+
+
+
+#bubble sorting
+
+import java.util.*;
+class bubble{
+    public static void main(String[] args ){
+        System.out.print("enter the size of the array:");
+        Scanner num = new Scanner(System.in);
+        int num1= num.nextInt();
+        int[] arr= new int[num1];
+        for(int i =0; i<num1; i++){
+            System.out.print("enter the number :");
+            arr[i] = num.nextInt();       
+        }
+        
+    for (int j = 0; j < num1 - 1; j++) {
+
+    for (int k = 0; k < num1 - 1 - j; k++) {
+
+        if (arr[k] > arr[k + 1]) {
+
+            int temp = arr[k];
+            arr[k] = arr[k + 1];
+            arr[k + 1] = temp;
+
+        }
+    }
+}
+
+for (int i = 0; i < num1; i++) {
+    System.out.print(arr[i] + " ");
+}
+     
+}
+}
+
+
+
+import java.util.*;
+class design{
+    public static void main(String[] args){
+        System.out.print("enter the size:");
+        Scanner num = new Scanner(System.in);
+        int num1 = num.nextInt();
+        for (int i = 1; i <= num1; i++) {
+
+    for (int j = 1; j <= num1 - i; j++)
+        System.out.print(" ");
+
+    for (int k = 1; k <= 2 * i - 1; k++)
+        System.out.print(i);
+
+    for (int y = 1; y <= 2 * (num1 - i)+1 ; y++)
+        System.out.print(" ");
+
+    for (int z = 1; z <= 2 * i - 1; z++)
+        System.out.print(i);
+
+    System.out.println();
+}
+    }
+}
+
+
+import java.util.*;
+class max{
+    public static void main(String[] args){
+        System.out.print("enter the size of the array :");
+        Scanner num = new Scanner(System.in);
+        int num1 = num.nextInt();
+        int[] arr = new int[num1];
+        for(int i =0; i<=num1-1 ; i++){
+            System.out.print("enter the numbers :");
+            arr[i] = num.nextInt();
+
+        }
+        for(int j=0 ; j<= num1-1; j++){
+            for (int k =0; k<=num1-2 ; k++){
+                if (arr[k]>arr[k+1]){
+                    int stem = arr[k+1];
+                    arr[k+1] = arr[k];
+                    arr[k]= stem ;
+                }
+
+            }
+        }
+        System.out.println("the max num is " +arr[num1-1]);
+        System.out.print("the min num is " + arr[0]);
+    }
+}
+
+import java.util.*;
+class max{
+    static int max(int[] arr){
+        int arp = arr[0];
+        for(int j= 1; j<3;j++){
+            if(arr[j]>arp){
+                arp = arr[j];
+            }
+
+
+        }
+        return arp; 
+
+
+    }
+    static int min(int[] arr){
+        int mini = arr[0];
+        for(int j= 1; j<3;j++){
+            if(arr[j]<mini){
+                mini = arr[j];
+            }
+
+
+        }
+        return mini; 
+
+    }
+
+    public static void main(String[] args){
+        System.out.print("enter the size of the array :");
+        Scanner num = new Scanner(System.in);
+        int num1 = num.nextInt();
+        int[] arr = new int[3];
+        for(int i =0; i<3 ; i++){
+            System.out.print("enter the numbers :");
+            arr[i] = num.nextInt();
+
+        }
+        
+        System.out.println("the max num is " +max(arr));
+        System.out.print("the min num is " + min(arr));
+    }
+}
+
+
+
+
+
+import java.util.Scanner;
+class prime{
+    public static void main(String[] args ){
+        System.out.print("enter the number");
+        Scanner num = new Scanner(System.in);
+        int num1= num.nextInt();
+        int ink= 0;
+        for (int i=1; i<=num1; i++){
+            if(num1%i==0){
+                ink+=1;
+
+            }
+            
+        }
+        if (ink==2){
+            System.out.print(num1+  "is prime");
+        }
+        else{
+            System.out.print("not a prime");
+        }
+    }
+}
+
+
+
+import java.util.Scanner;
+class matrix{
+    public static void main(String[] args ){
+        System.out.print("enter the size of the arr 1:");
+        Scanner num = new Scanner(System.in);
+        int num1 = num.nextInt();
+        System.out.print("enter the size of the arr2 :");
+        int num2 = num.nextInt();
+        System.out.print("enter the size of the target:");
+        int num3 = num.nextInt();
+        int[][] arr = new int[num1][num2]; 
+        for(int i=0; i<num1;i++){
+            for (int j =0;j< num2 ; j++){
+                System.out.print("enter the numbers : ");
+                arr[i][j] = num.nextInt();
+            }
+        }
+        for (int i = 0; i < num1; i++) {          // each row
+
+    for (int j = 0; j < num2 - 1; j++) {
+
+        for (int k = 0; k < num2 - 1 - j; k++) {
+
+            if (arr[i][k] > arr[i][k + 1]) {
+
+                int temp = arr[i][k];
+                arr[i][k] = arr[i][k + 1];
+                arr[i][k + 1] = temp;
+
+            }
+        }
+    }
+}
+        for(int i=0; i<num1;i++){
+            for (int j =0;j< num2 ; j++){
+                if(arr[i][j]==num3){
+                    System.out.print("true");
+                }
+                
+            }
+        }
+
+    }
+}
+
+
+
+import java.util.*;
+class sudoku {
+    public static void main(String[] args){
+        System.out.print("enter the size of the array:");
+        Scanner num = new Scanner(System.in);
+        int x=num.nextInt();
+        int[] arr = new int[x];
+        for(int i =0; i<x ; i++){
+            System.out.print("enter ra puka");
+            arr[i] = num.nextInt();
+        }
+        
+        int zap= arr[0];
+        int chinna= arr[0];
+        for(int j = 0;j<x;j++){
+            if(arr[j]> zap){
+            zap = arr[j];
+            }
+            if(arr[j]< chinna){
+            chinna = arr[j];
+            }
+
+        }
+        System.out.println(zap);
+        System.out.println(chinna);
+        int min =arr[0];
+        int max = arr[0];
+
+        for(int rixk = 0;rixk<x;rixk++){
+            if(arr[rixk]> max && arr[rixk]!=zap){
+            max = arr[rixk];
+            }
+            if(arr[rixk]< min && arr[rixk]!=chinna){
+            min = arr[rixk];
+            }
+
+        }
+        System.out.println("ne illa " +min);
+        System.out.print("ne max " +max);
+        
+
+     
+    }
+}
+
+
+
+import java.util.*;
+class greater{
+    public static void main(String[] args){
+        System.out.print("enter the size of the array");
+        Scanner num = new Scanner(System.in);
+        int x = num.nextInt();
+        num.nextLine();
+        ArrayList<String> num1 = new ArrayList<>();
+
+        for(int i = 1; i<=x; i++){
+
+            num1.add(num.nextLine());
+            
+        }
+        for(int j = 1; j<x; j++){
+
+            if(num1.get(j).length() > 5){
+                System.out.println("larger number is " +num1.get(j));
+
+            }
+            
+        }
+
+           
+            
+        
+
+    }
+}
+
+
+import java.util.*;
+class greater{
+    public static void main(String[] args){
+        System.out.print("enter the size of the array");
+        Scanner num = new Scanner(System.in);
+        int x = num.nextInt();
+        num.nextLine();
+        ArrayList<String> num1 = new ArrayList<>();
+
+        for(int i = 1; i<=x; i++){
+
+            num1.add(num.nextLine());
+            
+        }
+        for(int j = 1; j<x; j++){
+
+            if(num1.get(j).charAt(0) == 's'){
+                System.out.println("number starts with s is : " +num1.get(j));
+
+            }
+            
+        }
+
+           
+            
+        
+
+    }
+}
+
+import java.util.*;
+class bommidaiyalapulusu{
+    public static void main(String [] args){
+        Scanner num = new Scanner(System.in);
+        System.out.print("enter the size of the array:");
+        int num1 = num.nextInt();
+        int[] arr= new int[num1];
+        for(int i=0; i<num1; i++){
+            System.out.print("enter the number:");
+            arr[i]=num.nextInt();
+        }
+        int[] arr1= new int[num1];
+        int zeros=0;
+        int rocky=0;
+        for(int j =0;j<num1; j++){
+            if(arr[j]!=0){
+                arr1[rocky]=arr[j];
+                rocky++;
+            }
+        }
+        for(int k =rocky+1;k<num1; k++){
+            arr1[k]=0;
+        }
+        for(int i :arr1){
+            System.out.print(i+ " ");
+        }
+
+
+        }
+    }
+
+
+import java.util.*;
+class student{
+
+            String name;
+            int age ;
+            student(String name,int age ){
+                this. name = name;
+                this.age = age;
+            }
+
+
+
+
+        void display(){
+            System.out.print("name is " +name);
+            System.out.println();
+            System.out.print("age is " +age);
+            System.out.println();
+        }
+        }
+public class Oops {
+    public static void main(String[] args ){
+        student s1= new student("rishi",29);
+        s1.display();
+        student s2 =  new student("jack",19);
+        s2.display();
+    }
+}
