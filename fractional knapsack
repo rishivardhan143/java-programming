@@ -1,0 +1,52 @@
+import java.util.*;
+
+class Main {
+
+    static class Item {
+        int weight;
+        int value;
+
+        Item(int weight, int value) {
+            this.weight = weight;
+            this.value = value;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Item[] items = {
+            new Item(10, 60),
+            new Item(20, 100),
+            new Item(30, 120)
+        };
+
+        int capacity = 50;
+
+        Arrays.sort(items, (a, b) ->
+            Double.compare(
+                (double)b.value / b.weight,
+                (double)a.value / a.weight
+            )
+        );
+
+        double profit = 0;
+
+        for (Item item : items) {
+
+            if (capacity >= item.weight) {
+
+                capacity -= item.weight;
+                profit += item.value;
+
+            } else {
+
+                profit +=
+                    ((double)item.value / item.weight) * capacity;
+
+                break;
+            }
+        }
+
+        System.out.println(profit);
+    }
+}
