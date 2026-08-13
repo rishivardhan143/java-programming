@@ -1,0 +1,20 @@
+import java.util.*;
+import java.io.*;
+class Main{
+    public static void main(String[] args)throws IOException{
+        BufferedReader num = new BufferedReader(new InputStreamReader(System.in));
+        String num1 = num.readLine();
+        if(num1.startsWith("{")&& num1.endsWith("}")){
+            num1=num1.substring(1,num1.length()-1);
+        }
+        String[] arr= num1.split(",");
+        ArrayList<Integer> array= new ArrayList<>();
+        for(int i =0; i<arr.length;i++){
+            array.add(Integer.parseInt(arr[i]));
+        }
+        for(int j=0; j<arr.length;j++){
+            System.out.println(array.get(j));
+        }
+
+    }
+}
