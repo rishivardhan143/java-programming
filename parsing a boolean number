@@ -1,0 +1,60 @@
+import java.util.*;
+
+class Solution {
+    public boolean parseBoolExpr(String expression) {
+
+        Stack<Character> stack = new Stack<>();
+
+        for (char ch : expression.toCharArray()) {
+
+            if (ch == ',' ) {
+                continue;
+            }
+
+            if (ch != ')') {
+                stack.push(ch);
+            } 
+            else {
+                // Collect all values inside (...)
+                boolean hasTrue = false;
+                boolean hasFalse = false;
+
+                while (stack.peek() != '(') {
+                    char value = stack.pop();
+
+                    if (value == 't') {
+                        hasTrue = true;
+                    } else if (value == 'f') {
+                        hasFalse = true;
+                    }
+                }
+
+                // Remove '('
+                stack.pop();
+
+                // Get the operator: !, &, |
+                char operator = stack.pop();
+
+                boolean result;
+
+                if (operator == '!') {
+                    // NOT has exactly one value
+                    result = hasFalse;
+                } 
+                else if (operator == '&') {
+                    // AND is true only if everything is true
+                    result = !hasFalse;
+                } 
+                else {
+                    // OR is true if at least one is true
+                    result = hasTrue;
+                }
+
+                // Push result back
+                stack.push(result ? 't' : 'f');
+            }
+        }
+
+        return stack.pop() == 't';
+    }
+}
