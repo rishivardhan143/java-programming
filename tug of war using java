@@ -1,0 +1,68 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class GFG {
+
+    // Recursive function to find a subset with sum = total/2
+    static boolean findSubset(int[] arr, int i, int target, int total,
+                                            ArrayList<Integer> result) {
+        int n = arr.length;
+
+        if (target == total / 2 &&
+           ((n % 2 == 0 && result.size() == n / 2) ||
+            (n % 2 != 0 && (result.size() == n / 2 || result.size() == n / 2 + 1)))) {
+            return true;
+        }
+
+        if (i >= n) return false;
+
+        // include current element
+        result.add(i);
+        if (findSubset(arr, i + 1, target + arr[i], total, result)) return true;
+
+        // Backtrack
+        result.remove(result.size() - 1);
+
+        // exclude current element
+        if (findSubset(arr, i + 1, target, total, result)) return true;
+
+        return false;
+    }
+
+    // Function to partition array into two equal-sum subsets
+    static ArrayList<ArrayList<Integer>> equalPartition(int[] arr) {
+        int n = arr.length;
+        int total = 0;
+        for (int x : arr) total += x;
+
+        ArrayList<Integer> result = new ArrayList<>();
+        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+        res.add(new ArrayList<>()); 
+        res.add(new ArrayList<>()); 
+
+        // Storing result if possible
+        if (findSubset(arr, 0, 0, total, result)) {
+            int k = 0;
+            for (int i = 0; i < n; i++) {
+                if (k < result.size() && i == result.get(k)) {
+                    res.get(0).add(arr[i]);
+                    k++;
+                } else {
+                    res.get(1).add(arr[i]);
+                }
+            }
+        }
+
+        return res;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4};
+        ArrayList<ArrayList<Integer>> res = equalPartition(arr);
+
+        for (ArrayList<Integer> subset : res) {
+            for (int x : subset) System.out.print(x + " ");
+            System.out.println();
+        }
+    }
+}
