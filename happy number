@@ -1,0 +1,35 @@
+import java.util.*;
+
+class Happy {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        while (true) {
+
+            num++;                 // Check the next number
+            int temp = num;
+
+            while (temp >= 10) {
+
+                int sum = 0;
+
+                while (temp > 0) {
+                    int digit = temp % 10;
+                    sum += digit * digit;
+                    temp /= 10;
+                }
+
+                temp = sum;
+            }
+
+            if (temp == 1) {
+                System.out.println(num + " is the next Happy Number");
+                break;
+            }
+        }
+    }
+}
