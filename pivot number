@@ -1,0 +1,42 @@
+import java.util.*;
+class pivot{
+    public static void main(String[] args){
+        Scanner num = new Scanner(System.in);
+        System.out.print("enter the size of the array:");
+        int num1= num.nextInt();
+        int [] arr =new int[num1];
+        for(int i =0; i<num1;i++){
+            System.out.print("enter the number:");
+            arr[i]=num.nextInt();
+        }
+        int leftsum=0;
+        int rightsum=0;
+        boolean found=false;
+        for(int j =0;j<num1-1; j++){
+            if(j==0){
+                leftsum=0;
+            }
+            else{
+            for(int k =0; k<j ; k++){
+                leftsum+=arr[k];
+
+            }
+            }
+            for(int l=j+1; l<num1; l++){
+                rightsum+=arr[l];
+                }
+            if(leftsum==rightsum){
+                System.out.print("pivot number is :" +j);
+                found =true;
+                break;
+            }
+            else{
+                leftsum=0;
+                rightsum=0;
+            }
+        }
+        if(!found){
+            System.out.print("-1");
+        }
+    }
+}
