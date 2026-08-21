@@ -1,41 +1,43 @@
-# Java Hashing Practice Codes
+# Java Linked List Codes
 
-Topics covered:
+## Types covered
+1. Singly Linked List
+2. Doubly Linked List
+3. Circular Singly Linked List
+4. Circular Doubly Linked List
 
-1. Frequency count using HashMap
-2. Count duplicate numbers
-3. Remove duplicates using HashSet
-4. Character frequency
-5. First non-repeating character
-6. First repeating element
-7. Two Sum using HashMap
-8. Array intersection
-9. Array union
-10. Anagram checking
-11. Subarray sum equals K
-12. Longest consecutive sequence
-13. HashMap basic operations
-14. HashSet basic operations
-15. Word frequency
+## DSA problems covered
+- Create and display
+- Insert at beginning
+- Insert at end
+- Insert at position
+- Delete beginning
+- Delete end
+- Delete by value
+- Search
+- Length
+- Reverse iteratively
+- Reverse recursively
+- Find middle
+- Nth node from end
+- Detect cycle
+- Remove cycle
+- Merge sorted lists
+- Remove duplicates
+- Check palindrome
+- Intersection of two linked lists
+- Doubly linked list
+- Circular singly linked list
+- Circular doubly linked list
 
-Core methods to remember:
+## Important patterns
 
-HashMap:
-- put(key, value)
-- get(key)
-- getOrDefault(key, defaultValue)
-- containsKey(key)
-- remove(key)
-- entrySet()
+Reverse:
+prev -> null
+current -> head
 
-HashSet:
-- add(value)
-- contains(value)
-- remove(value)
-- size()
+Slow/Fast:
+slow moves 1 step
+fast moves 2 steps
 
-Important pattern:
-
-map.put(x, map.getOrDefault(x, 0) + 1);
-
-This is commonly used for frequency counting.
+These two-pointer patterns are very important in linked-list DSA.
